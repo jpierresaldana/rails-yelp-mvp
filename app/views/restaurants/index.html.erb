@@ -1,1 +1,10 @@
-<h1>index</h1>
+<div class="conteiner">
+<div>
+  <h1>List of Restaurant</h1>
+  <%#   <ul>
+      <% @restaurants.each do |restaurant| %>
+ <%#      <li> <%= restaurant.name </li>%>
+<%#    </ul> %></div>
+  <div><%= link_to "See details", restaurants_path(@restaurants), class: "btn btn-primary"%></div>
+
+</div>
