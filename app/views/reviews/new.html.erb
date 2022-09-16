@@ -1,20 +1,14 @@
 <div class="container">
 <h1>new</h1>
 
-<%= simple_form_for(@restaurant) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :phone_number %>
-  <%= f.input :category %>
-  <%= f.submit %>
-<% end %>
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :rating %>
+    <%= f.input :content %>
+    <%= f.submit %>
+  <% end %>
+
 
  <div>
-      <%= link_to "Back to List Restaurants", restaurants_path, class: "btn btn-primary"%>
-    </div>
-    <div>
-      <%= link_to "Back to Show Restaurant", restaurant_path, class: "btn btn-primary"%>
-    </div><div>
-      <%= link_to "Add new Review", new_restaurant_path, class: "btn btn-primary"%>
-    </div>
+    <%= link_to "Back Restaurants", restaurants_path, class: "btn btn-primary"%>
+  </div>
 </div>

@@ -6,8 +6,15 @@
 <p><%= @restaurant.phone_number %></p>
 <p><%= @restaurant.category %></p>
 
+
+  <% @restaurant.reviews.each do |review| %>
+    <%= review.rating %>
+    <%= review.content %>
+  <% end %>
+
+
  <div>
       <%= link_to "Add review", new_restaurant_review_path(@restaurant), class: "btn btn-primary"%>
     </div>
-
+    
 </div>
